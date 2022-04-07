@@ -62,11 +62,10 @@ removeFromArray(array: &beers, arrayElement: "Stout")
 // Решение задачи №2:
 // подготовленный словарь
 userPoints
-func foo(dictionary: [Int: Double], ratio: Int = 100 / 10) -> [Int: Int]{
+func pointsTransfering(dictionary: [Int: Double], ratio: Int = 100 / 10) -> [Int: Int]{
     return dictionary.mapValues({Int($0) / ratio})
 }
-print(foo(dictionary: userPoints))
-
+print(pointsTransfering(dictionary: userPoints))
 
 //: ## Задача №3 (*)
 //:  Вам необходимо реализовать функцию, которая принимаем массив опциональных значений типа Integer и возвращает кортеж, в который необходимо передать сумму четных и нечетных значений.
