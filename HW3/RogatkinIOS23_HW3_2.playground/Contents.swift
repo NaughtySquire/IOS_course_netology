@@ -11,6 +11,9 @@ var herThings: (String, Double, String) = (
     777,
     "Картошка с макарошками"
 )
+
+
+
 var tempThings: (String, Double, String) = herThings
 herThings = myThings
 myThings = tempThings
