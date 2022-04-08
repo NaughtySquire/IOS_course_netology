@@ -62,8 +62,8 @@ removeFromArray(array: &beers, arrayElement: "Stout")
 // Решение задачи №2:
 // подготовленный словарь
 userPoints
-func pointsTransfering(dictionary: [Int: Double], ratio: Int = 100 / 10) -> [Int: Int]{
-    return dictionary.mapValues({Int($0) / ratio})
+func pointsTransfering(dictionary: [Int: Double], pointsRatio: Int = 10) -> [Int: Int]{
+    return dictionary.mapValues({Int($0) / 100 * pointsRatio})
 }
 print(pointsTransfering(dictionary: userPoints))
 
