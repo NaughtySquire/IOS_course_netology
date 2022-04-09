@@ -29,18 +29,17 @@ var journal: [String: [String: Int]] =  [
 
 // TASK - 3
 typealias Chessman = [String: (alpha: Character, num: Int)?]
-var Chessmans: Chessman = [
+var chessmans: Chessman = [
     "Белый король": ("1", 1),
     "Черный король": ("2", 2),
     "Черно-белый король": nil
 ]
-if let chessPieceCoords = Chessmans["Черный король"]{
+if let chessPieceCoords = chessmans["Черный король"]{
     print("Черный король:", chessPieceCoords!.alpha, chessPieceCoords!.num)
 }else{
     print("На игровом поле такой фигуры нет.")
 }
 
 // TASK - 4
-for (chessPieceName, chessPieceCoords) in Chessmans{
-    print(chessPieceName, ": ", chessPieceCoords ?? "на игровом поле такой фигуры нет.", separator: "")
-}
+
+chessmans.keys.forEach({print($0, ": ", chessmans[$0]! ?? "на игровом поле такой фигуры нет.", separator: "" )})
