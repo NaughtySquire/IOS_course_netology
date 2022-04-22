@@ -12,9 +12,6 @@ enum CarDealingError: Error{
     }
 }
 
-// TASK - 1
-
-
 protocol CarProtocol{
     var model: String{ get }
     var color: String{ get }
@@ -41,7 +38,6 @@ extension CarProtocol{
     }
 }
 
-// TASK - 2
 protocol DealershipProtocol{
     var name: String{ get }
     var showroomCapacity: Int{ get }
@@ -55,7 +51,6 @@ protocol DealershipProtocol{
     func orderCar()
 }
 
-// TASK - 3
 struct Car: CarProtocol{
     var model: String
     var color: String
@@ -88,7 +83,7 @@ class Dealership: DealershipProtocol{
     func presaleService(_ car: inout Car) {
         car.makePresaleService()
     }
-
+    // TASK - 2
     func addToShowroom(_ car: Car) throws {
         guard let stockCarIndex = stockCars.firstIndex(where: {$0.equals(car)}) else{
             throw CarDealingError.addToShowroomError
@@ -164,14 +159,8 @@ for dealership in dealerships{
 
     }
 }
-// СЛОГАНЫ
-print("\nСЛОГАНЫ")
-for dealership in dealerships{
-    dealership.showSlogan()
-}
 
 
-// TASK - 4
 protocol SpecialOffer{
     mutating func addEmergencyPack()
     mutating func makeSpecialOffer() throws
@@ -183,7 +172,7 @@ extension Car: SpecialOffer{
     mutating func addEmergencyPack() {
         addAccesories(["аптечка", "огнетушитель"])
     }
-
+    // TASK - 1
     mutating func makeSpecialOffer() throws{
         let calendar = Calendar.current
         guard calendar.component(.year, from: Date()) >
@@ -194,7 +183,7 @@ extension Car: SpecialOffer{
         addEmergencyPack()
     }
 }
-
+// TASK - 1, 2
 extension DealershipProtocol{
     mutating func checkCarsForSpecialOffer(){
         for i in 0..<cars.count{
