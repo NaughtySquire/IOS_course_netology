@@ -92,8 +92,8 @@ class StarshipImp: Starship, Shooting {
 
 extension StarshipImp{
     func moveTo(_ point: Point){
-        coordinate.x = round(point.x / 3)
-        coordinate.y = round(point.y / 3)
+        coordinate.x += round((point.x - coordinate.x) / 3)
+        coordinate.y += round((point.y - coordinate.y) / 3)
         print("Перемещаемся в сектор", coordinate.x, coordinate.y)
     }
 }

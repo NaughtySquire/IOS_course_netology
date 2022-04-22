@@ -24,6 +24,7 @@
 		2B6128B42384082B00331477 /* WeaponsEmpire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6128A9238407F100331477 /* WeaponsEmpire.swift */; };
 		2B6128B52384083000331477 /* WeaponsJedi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6128A1238407F100331477 /* WeaponsJedi.swift */; };
 		2B6128B62384083000331477 /* StartshipsJedi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6128A2238407F100331477 /* StartshipsJedi.swift */; };
+		79BB2D16281357840094FAAD /* report.md in Resources */ = {isa = PBXBuildFile; fileRef = 79BB2D15281357840094FAAD /* report.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,7 @@
 		2B6128A9238407F100331477 /* WeaponsEmpire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsEmpire.swift; sourceTree = "<group>"; };
 		2B6128AA238407F100331477 /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
 		2B6128AB2384081800331477 /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
-		79B6D955281280FB00066CC1 /* report.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = report.md; sourceTree = "<group>"; };
+		79BB2D15281357840094FAAD /* report.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = report.md; path = ../../../../../../Desktop/report.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +89,7 @@
 				2B6128932384077300331477 /* Assets.xcassets */,
 				2B6128952384077300331477 /* LaunchScreen.storyboard */,
 				2B6128982384077300331477 /* Info.plist */,
-				79B6D955281280FB00066CC1 /* report.md */,
+				79BB2D15281357840094FAAD /* report.md */,
 			);
 			path = "StarWars for iOS";
 			sourceTree = "<group>";
@@ -184,6 +185,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BB2D16281357840094FAAD /* report.md in Resources */,
 				2B6128972384077300331477 /* LaunchScreen.storyboard in Resources */,
 				2B6128942384077300331477 /* Assets.xcassets in Resources */,
 				2B6128922384077000331477 /* Main.storyboard in Resources */,
@@ -357,6 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72FC8R65V;
 				INFOPLIST_FILE = "StarWars for iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V72FC8R65V;
 				INFOPLIST_FILE = "StarWars for iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

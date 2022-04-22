@@ -24,9 +24,7 @@ class GamePlay {
         let superCruiser = Dreadnought()
         superCruiser.shootHandler = space
         space.add(object: superCruiser)
-
-        print(-1...1)
-
+        print(round(2 / 3))
         let xWing = XWing()
         xWing.shootHandler = space
                 

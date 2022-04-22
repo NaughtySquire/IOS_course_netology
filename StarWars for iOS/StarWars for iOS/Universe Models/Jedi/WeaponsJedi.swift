@@ -14,7 +14,7 @@ struct Bomb: Weapons {
     var damage: Int = 100
     var rateOfFire: Int = 2
     var ammunition: Int = 20
-    var distance: Int = 2
+    var distance: Int = 3
 }
 
 struct LazerBlaster: Weapons {
