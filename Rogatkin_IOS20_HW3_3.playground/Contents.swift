@@ -11,7 +11,7 @@ enum CarDealingError: Error{
         }
     }
 }
-// TASK - 1
+
 protocol CarProtocol{
     var model: String{ get }
     var color: String{ get }
@@ -22,7 +22,7 @@ protocol CarProtocol{
     var VIN: Int { get }
 }
 
-// TASK - 2
+
 protocol DealershipProtocol{
     var name: String{ get }
     var showroomCapacity: Int{ get }
@@ -35,9 +35,9 @@ protocol DealershipProtocol{
     func sellCar(_ car: Car)
     func orderCar()
 }
-// TASK - 3
+
 struct Car: CarProtocol{
-    private static var lastVIN: Int = 0
+    private static var lastId: Int = 0
     var VIN: Int
     var model: String
     var color: String
@@ -59,8 +59,8 @@ struct Car: CarProtocol{
         self.price = price
         self.accesories = accesories
         self.isServiced = isServiced
-        Car.lastVIN += 1
-        VIN = Car.lastVIN
+        Car.lastId += 1
+        VIN = Car.lastId
     }
 }
 extension Car{
@@ -103,7 +103,7 @@ class Dealership: DealershipProtocol{
             print("Для автомобиля \(car.model) проведена предпродажная подготовка.")
         }
     }
-
+    // TASK - 2
     func addToShowroom(_ car: Car) throws {
         guard let _ = stockCars.firstIndex(where: {$0.equals(car)}) else{
             throw CarDealingError.addToShowroomError
@@ -179,7 +179,7 @@ for dealership in dealerships{
 for dealership in dealerships {
     dealership.showSlogan()
 }
-// TASK - 4
+
 protocol SpecialOffer{
      func addEmergencyPack()
      func makeSpecialOffer() throws
@@ -187,6 +187,7 @@ protocol SpecialOffer{
 
 
 extension Dealership: SpecialOffer{
+
     func makeSpecialOffer() throws{
         let calendar = Calendar.current
         for carIndex in stockCars.indices{
